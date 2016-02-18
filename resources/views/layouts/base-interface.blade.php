@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Bem-vindo ao SYS-HELP</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" href="{{{ asset('/css/app.css') }}}" media="screen" charset="utf-8">
+    <link rel="stylesheet" href="{{{ asset('/css/FONT_HTML_CSS/style.css') }}}" media="screen" title="no title" charset="utf-8">
+  </head>
+  <body>
+    <header>
+      <span class="logo-header"><a href="{{url('/home')}}"><span aria-hidden="true" class="li_cup">&nbsp;</span></a></span>
+      @yield('header')
+      @if(!Auth::guest())
+      <div class="container-user">
+        <span aria-hidden="true" class="li_user"></span>
+        <menu id="container-menu-user">
+          <ul>
+            <li class="item-menu">Olá,{{ Auth::user()->name }} bom ?</li>
+            <li class="item-menu"><a href="{{ url('/logout') }}">Logout</a></li>
+          </ul>
+        </menu>
+      </div>
+      @endif
+    </header>
+    <main>
+      @yield('menu-secundario')
+      @yield('main')
+    </main>
+  </body>
+  <script type="text/javascript" src="{{{ asset('js/jquery-1.11.1.min.js') }}}"></script>
+  <script type="text/javascript" src="{{{ asset('js/js.js') }}}"></script>
+</html>

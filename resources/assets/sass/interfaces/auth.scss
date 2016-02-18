@@ -1,0 +1,5 @@
+.form-auth{
+  @include span-columns(6 of 12);
+  @include shift(3);
+  margin-top: 1em;
+}

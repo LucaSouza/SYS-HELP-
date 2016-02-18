@@ -1,0 +1,16 @@
+.container-pessoas{
+    @include span-columns(10);
+    @include shift(1);
+}
+
+.container-pessoa{
+  background-color: white;
+  @include span-columns(3 of 10);
+  @include omega(3n);
+  margin-top: 2vh;
+  margin-left: 2vw;
+  &:hover{
+    @include transform(scale(1.01));
+    cursor: pointer;
+  }
+}
