@@ -364,11 +364,9 @@ header {
     width: 14.70196%;
     text-align: center;
     height: 100%;
-    padding-top: 1em; }
+    padding-top: 2.5em; }
     header .container-user:last-child {
       margin-right: 0; }
-    header .container-user .li_user {
-      font-size: 3em; }
     header .container-user #container-menu-user {
       text-align: left;
       margin-right: 1em;
@@ -498,8 +496,17 @@ footer {
   color: red;
   text-align: center; }
 
-#nome-user {
+.nome-user {
   text-transform: capitalize; }
+
+.inexistente {
+  text-align: center;
+  font-size: 2em;
+  font-weight: 100; }
+
+#header-tecnico-nome {
+  font-size: 1.2em;
+  cursor: pointer; }
 
 #container-buttons {
   float: right;

@@ -38,12 +38,12 @@
 				  <a href="javascript:void(0)" class="grid-item">
 				    <span aria-hidden="true" class="li_shop"></span>
 						<h1>Clientes</h1>
-				    <p>Atualmente temos 500 clientes utilizando nosso sistema. ;)</p>
+				    <p>Atualmente não temos nenhum cliente, mas se Deus quiser teremos. ;)</p>
 				  </a>
 				  <a href="javascript:void(0)" class="grid-item grid-item-big grid-item-image">
 				    <span aria-hidden="true" class="li_study"></span>
 				    <h1>Contribuidores</h1>
-				    <p>Atualmente em nosso projeto temos 6 contribuidores, o sistema esta no github, e se você é desenvolvedor contribua com o projeto.</p>
+				    <p>Atualmente em nosso projeto temos 6 contribuidores.</p>
 				  </a>
 				  <a href="javascript:void(0)" class="grid-item grid-item-big">
 				    <span aria-hidden="true" class="li_note"></span>
@@ -52,8 +52,8 @@
 				  </a>
 				  <a href="javascript:void(0)" class="grid-item">
 				    <span aria-hidden="true" class="li_settings"></span>
-				    <h1>Esse é o nosso único projeto. ;p</h1>
-				    <p></p>
+				    <h1>Projetos</h1>
+				    <p>Esse é o nosso único projeto. ;p</p>
 				  </a>
 			</div>
 		</main>

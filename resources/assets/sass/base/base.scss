@@ -32,10 +32,7 @@ header{
     @include span-columns(2 of 12);
     text-align: center;
     height: 100%;
-    padding-top: 1em;
-    .li_user{
-       font-size: 3em;
-    }
+    padding-top: 2.5em;
     #container-menu-user{
       text-align: left;
       margin-right: 1em;
@@ -135,6 +132,15 @@ footer{
   color: red;
   text-align: center;
 }
-#nome-user{
+.nome-user{
   text-transform: capitalize;
+}
+.inexistente{
+  text-align: center;
+  font-size: 2em;
+  font-weight: 100;
+}
+#header-tecnico-nome{
+  font-size: 1.2em;
+  cursor: pointer;
 }
