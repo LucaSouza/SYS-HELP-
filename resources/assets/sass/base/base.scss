@@ -78,6 +78,7 @@ header{
 main{
   @include span-columns(12);
   height: auto;
+  padding-bottom: 20px;
 }
 
 footer{
