@@ -27,6 +27,6 @@
         @endforeach
     </div>
   @else
-    <p>Clientes Inexistentes</p>
+    <p class="principa inexistente">Você não possui cliente..</p>
   @endif
 @stop

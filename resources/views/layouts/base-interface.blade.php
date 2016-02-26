@@ -13,10 +13,15 @@
       @yield('header')
       @if(!Auth::guest())
       <div class="container-user">
-        <span aria-hidden="true" class="li_user"></span>
+        <span id="header-tecnico-nome" class="nome-user">{{ Auth::user()->name }}</span>
         <menu id="container-menu-user">
           <ul>
+<<<<<<< HEAD
             <li class="item-menu">Olá, {{ Auth::user()->name }}  benvindo!</li>
+=======
+            <li class="item-menu nome-user">Olá,{{ Auth::user()->name }} bom?</li>
+            <li class="item-menu"><a href="{{action('ClienteController@registrarClienteView')}}">Cadastrar Cliente</a></li>
+>>>>>>> e6c3653b5cc60e9f668a14bb5935ca01584f8c1d
             <li class="item-menu"><a href="{{ url('/logout') }}">Logout</a></li>
           </ul>
         </menu>

@@ -17,6 +17,7 @@
     margin-top: 1vh;
     border-radius: 2px;
     background-color: white;
+    min-height: 100px;
     &:hover{
         @include transform(scale(1.02));
         cursor: pointer;

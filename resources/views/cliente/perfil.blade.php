@@ -62,7 +62,7 @@
             </a>
           @endforeach
         @else
-          <p>Nenhuma periferico cadastrado</p>
+          <p class="principal">Nenhuma periferico cadastrado</p>
         @endif
       </div>
   </div>
