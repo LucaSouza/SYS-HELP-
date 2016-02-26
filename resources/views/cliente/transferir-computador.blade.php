@@ -6,7 +6,7 @@
 
 @section('menu-secundario')
   <menu id="menu-secundario">
-    <p>Olá,{{Auth::user()->name}} bom ?<br> Vamos mandar esse {{$computador->modelo}} para outro cliente ?</p>
+    <p>Olá,{{Auth::user()->name}}  tudo bom?<br> Vamos mandar esse {{$computador->modelo}} para outro cliente?</p>
   </menu>
 @stop
 

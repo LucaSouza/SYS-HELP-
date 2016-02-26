@@ -30,7 +30,7 @@
 				    <a href=""><span aria-hidden="true" class="li_cup hero-logo">&nbsp;</a>
 						<div class="hero-copy">
 							<h1>SYS HELP</h1>
-							<p>Um sistema Web desenvolvido para todos os técnicos em informática do mundo !</p>
+							<p>Um sistema Web desenvolvido para todos os técnicos em informática do mundo!</p>
 						</div>
 					</div>
 			</div>
@@ -48,11 +48,11 @@
 				  <a href="javascript:void(0)" class="grid-item grid-item-big">
 				    <span aria-hidden="true" class="li_note"></span>
 				    <h1>Documentação</h1>
-				    <p>Toda documentação esta no Github, da uma olhada lá !</p>
+				    <p>Toda documentação esta no Github, da uma olhada lá!</p>
 				  </a>
 				  <a href="javascript:void(0)" class="grid-item">
 				    <span aria-hidden="true" class="li_settings"></span>
-				    <h1>Esse é o nosso único projeto. ;p</h1>
+				    <h1>Esse é o nosso primeiro projeto. ;p</h1>
 				    <p></p>
 				  </a>
 			</div>

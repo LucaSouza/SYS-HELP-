@@ -21,7 +21,7 @@
       </div>
 
       <div>
-          <label>E-Mail Address
+          <label>E-mail
             @if ($errors->has('email'))
                 <span>
                     <strong class="error">{{ $errors->first('email') }}</strong>
@@ -35,7 +35,7 @@
       </div>
 
       <div>
-          <label>Password
+          <label>Senha
             @if ($errors->has('password'))
                 <span>
                     <strong class="error">{{ $errors->first('password') }}</strong>
@@ -49,7 +49,7 @@
       </div>
 
       <div>
-          <label>Confirm Password
+          <label>Confirmar Senha
             @if ($errors->has('password_confirmation'))
                 <span>
                     <strong class="error">{{ $errors->first('password_confirmation') }}</strong>

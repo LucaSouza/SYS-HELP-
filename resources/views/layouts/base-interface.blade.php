@@ -16,7 +16,7 @@
         <span aria-hidden="true" class="li_user"></span>
         <menu id="container-menu-user">
           <ul>
-            <li class="item-menu">Olá,{{ Auth::user()->name }} bom ?</li>
+            <li class="item-menu">Olá, {{ Auth::user()->name }}  benvindo!</li>
             <li class="item-menu"><a href="{{ url('/logout') }}">Logout</a></li>
           </ul>
         </menu>

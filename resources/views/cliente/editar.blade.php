@@ -5,7 +5,7 @@
 @stop
 @section('menu-secundario')
   <menu id="menu-secundario-computador">
-    <p>Página dedicada a editar o ser humano <br>{{$cliente->nome}}</p>
+    <p>Página dedicada a editar o cliente <br>{{$cliente->nome}}</p>
   </menu>
 @stop
 @section('main')
