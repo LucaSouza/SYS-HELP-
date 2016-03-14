@@ -52,13 +52,8 @@
 				  </a>
 				  <a href="javascript:void(0)" class="grid-item">
 				    <span aria-hidden="true" class="li_settings"></span>
-<<<<<<< HEAD
-				    <h1>Esse é o nosso primeiro projeto. ;p</h1>
-				    <p></p>
-=======
 				    <h1>Projetos</h1>
-				    <p>Esse é o nosso único projeto. ;p</p>
->>>>>>> e6c3653b5cc60e9f668a14bb5935ca01584f8c1d
+				    <p>Esse é o nosso primeiro projeto. ;p</p>
 				  </a>
 			</div>
 		</main>
