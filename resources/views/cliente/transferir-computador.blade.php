@@ -6,7 +6,11 @@
 
 @section('menu-secundario')
   <menu id="menu-secundario">
+<<<<<<< HEAD
     <p><span class="nome-user">{{Auth::user()->name}}</span><br> Deseja transferir o computador {{$computador->modelo}} para outro cliente?</p>
+=======
+    <p><span class="nome-user">{{Auth::user()->name}}</span> tudo bom?<br> Vamos mandar esse {{$computador->modelo}} para outro cliente?</p>
+>>>>>>> ef7ac781d63a0cdb3546c4c4d2246b9497326a01
   </menu>
 @stop
 

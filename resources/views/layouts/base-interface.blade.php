@@ -16,6 +16,10 @@
         <span id="header-tecnico-nome" class="nome-user">{{ Auth::user()->name }}</span>
         <menu id="container-menu-user">
           <ul>
+<<<<<<< HEAD
+=======
+            <li class="item-menu nome-user">Olá,{{ Auth::user()->name }}, benvindo?</li>
+>>>>>>> ef7ac781d63a0cdb3546c4c4d2246b9497326a01
             <li class="item-menu"><a href="{{action('ClienteController@registrarClienteView')}}">Cadastrar Cliente</a></li>
             <li class="item-menu"><a href="{{ url('/logout') }}">Logout</a></li>
           </ul>

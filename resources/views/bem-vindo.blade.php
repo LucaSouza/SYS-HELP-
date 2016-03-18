@@ -46,7 +46,11 @@
 				  <a href="javascript:void(0)" class="grid-item grid-item-big">
 				    <span aria-hidden="true" class="li_note"></span>
 				    <h1>Documentação</h1>
+<<<<<<< HEAD
 				    <p>Toda documentação está no Github, da uma olhada lá!</p>
+=======
+				    <p>Toda documentação esta no Github, da uma olhada lá!</p>
+>>>>>>> ef7ac781d63a0cdb3546c4c4d2246b9497326a01
 				  </a>
 				  <a href="javascript:void(0)" class="grid-item">
 				    <span aria-hidden="true" class="li_settings"></span>

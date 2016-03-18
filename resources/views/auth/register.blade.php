@@ -21,7 +21,11 @@
       </div>
 
       <div>
+<<<<<<< HEAD
           <label>Email
+=======
+          <label>E-mail
+>>>>>>> ef7ac781d63a0cdb3546c4c4d2246b9497326a01
             @if ($errors->has('email'))
                 <span>
                     <strong class="error">{{ $errors->first('email') }}</strong>

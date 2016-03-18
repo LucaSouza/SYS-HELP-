@@ -14,7 +14,7 @@
     {!! csrf_field() !!}
 
     <div>
-        <label>E-Mail
+        <label>E-mail
           @if ($errors->has('email'))
               <span class="help-block">
                   <strong class="error">{{ $errors->first('email') }}</strong>

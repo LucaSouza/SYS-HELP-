@@ -7,10 +7,17 @@ SYS-HELP é um sistema web direcionado para técnicos em informática e seus cli
 
 ## Contribuições
   Adriano Garcez
+  
   Daniel Brumazzi 
+  
   Lucas Alves
+  
   Lucas Willans
+  
   Sergio Ricardo
-  Renato 
+  
+  Renato Garcia
   
 ## License
+
+

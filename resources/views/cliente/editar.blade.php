@@ -4,11 +4,16 @@
   <div class="panel-heading"><a href="{{action('ClienteController@perfil',$cliente->id)}}">{{$cliente->nome}}</a></div>
 @stop
 @section('menu-secundario')
+<<<<<<< HEAD
   <menu id="menu-secundario">
     <li><a href="{{action('ClienteController@registrarComputadorView',$cliente->id)}}">Cadastrar Computador</a></li>
     <li><a href="{{action('ClienteController@registrarPerifericoView',$cliente->id)}}">Cadastrar Periférico</a></li>
     <li><a href="{{action('ClienteController@registrarSetorView',$cliente->id)}}">Cadastrar Setor</a></li>
     <li><a href="{{action('ClienteController@editarClienteView',$cliente->id)}}">Editar Cliente</a></li>
+=======
+  <menu id="menu-secundario-computador">
+    <p>Página dedicada a editar o cliente <br>{{$cliente->nome}}</p>
+>>>>>>> ef7ac781d63a0cdb3546c4c4d2246b9497326a01
   </menu>
 @stop
 @section('main')

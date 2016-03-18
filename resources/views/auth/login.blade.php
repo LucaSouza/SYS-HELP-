@@ -6,7 +6,11 @@
   <form class="form-auth" role="form" method="POST" action="{{ url('/entrar') }}">
       {!! csrf_field() !!}
       <div>
+<<<<<<< HEAD
           <label>Email
+=======
+          <label>E-mail
+>>>>>>> ef7ac781d63a0cdb3546c4c4d2246b9497326a01
               @if ($errors->has('email'))
                   <span class="help-block">
                       <strong class="error">{{ $errors->first('email') }}</strong>
@@ -35,7 +39,11 @@
 
       <div>
           <button type="submit">Entrar</button>
+<<<<<<< HEAD
           <a href="{{ url('senha/resetar') }}">Esqueci minha senha!</a>
+=======
+          <a href="{{ url('/password/reset') }}">Esqueceu a senha, clique aqui!</a>
+>>>>>>> ef7ac781d63a0cdb3546c4c4d2246b9497326a01
       </div>
   </form>
 @endsection
