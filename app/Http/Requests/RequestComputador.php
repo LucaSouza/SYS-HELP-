@@ -32,6 +32,7 @@ class RequestComputador extends Request
           "nome" => "max:20",
           "grupo" => "max:20",
           "programas" => "max:200",
+          "setor" => "required"
         ];
     }
 }

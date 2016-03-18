@@ -28,4 +28,8 @@ class cliente extends Model
       return $this->hasMany(periferico::class, 'cliente');
     }
 
+    public function setores(){
+      return $this->hasMany(setor::class, 'cliente');
+    }
+
 }

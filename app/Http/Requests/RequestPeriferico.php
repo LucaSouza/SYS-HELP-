@@ -27,7 +27,8 @@ class RequestPeriferico extends Request
           "modelo" => "max:40",
           "descricao" => "max:60",
           "interface" => "max:20",
-          "observacao" => "max:200"
+          "observacao" => "max:200",
+          "setor" => "required"
         ];
     }
 }

@@ -9,14 +9,13 @@
   </head>
   <body>
     <header>
-      <span class="logo-header"><a href="{{url('/home')}}"><span aria-hidden="true" class="li_cup">&nbsp;</span></a></span>
+      <a href="{{url('/principal')}}" class="logo-header" ><img src="{{{ asset('/imagens/logo.png')}}}" alt=""/></a>
       @yield('header')
       @if(!Auth::guest())
       <div class="container-user">
         <span id="header-tecnico-nome" class="nome-user">{{ Auth::user()->name }}</span>
         <menu id="container-menu-user">
           <ul>
-            <li class="item-menu nome-user">Olá,{{ Auth::user()->name }} bom?</li>
             <li class="item-menu"><a href="{{action('ClienteController@registrarClienteView')}}">Cadastrar Cliente</a></li>
             <li class="item-menu"><a href="{{ url('/logout') }}">Logout</a></li>
           </ul>
@@ -29,6 +28,8 @@
       @yield('main')
     </main>
   </body>
-  <script type="text/javascript" src="{{{ asset('js/jquery-1.11.1.min.js') }}}"></script>
+  <script type="text/javascript" src="{{ URL::asset('js/jquery-2.2.1.min.js') }}"></script>
+  <script type="text/javascript" src="{{ URL::asset('js/masked.js') }}"></script>
+  <script type="text/javascript" src="{{url('http://cidades-estados-js.googlecode.com/files/cidades-estados-v0.2.js')}}"></script>
   <script type="text/javascript" src="{{{ asset('js/js.js') }}}"></script>
 </html>

@@ -3,16 +3,18 @@
     @include shift(1);
 }
 .computadores,
-.perifericos{
-  @include span-columns(5 of 10);
+.perifericos,
+.setores{
+  @include span-columns(4.8 of 10);
+  margin-left: 0.5vw;
   .tema{
-    @include span-columns(5 of 5);
+    @include span-columns(4.8 of 4.8);
     background-color: white;
     text-align: center;
     font-weight: bold;
   }
   .computador{
-    @include span-columns(2.5 of 5);
+    @include span-columns(2.4 of 4.8);
     @include omega(3n);
     margin-top: 1vh;
     border-radius: 2px;
@@ -23,6 +25,15 @@
         cursor: pointer;
     }
   }
+}
+#tema-form{
+  font-size: rem(18);
+  height: 6vh;
+  margin-bottom: 10vh;
+  font-weight: 400;
+}
+.setores{
+  margin-top: 2vh;
 }
 
 .texto-principal{

@@ -22,7 +22,7 @@
   @endif
   <form class="form-auth" action="{{action('ClienteController@alterarPeriferico',['id'=>$periferico->cliente,'id_periferico'=>$periferico->id])}}" method="post">
     @include('models/model-form-cadastro-edit-periferico')
-    <button type="submit">Alterar</button>
+    <br><button type="submit">Alterar</button>
     <a href="{{action('ClienteController@excluirPeriferico',['id'=>$periferico->cliente,'id_periferico'=>$periferico->id])}}"><button type="button" name="button">Excluir</button></a>
   </form>
 @stop

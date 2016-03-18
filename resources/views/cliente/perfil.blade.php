@@ -10,6 +10,7 @@
     <ul>
       <li><a href="{{action('ClienteController@registrarComputadorView',$valores->id)}}">Cadastrar Computador</a></li>
       <li><a href="{{action('ClienteController@registrarPerifericoView',$valores->id)}}">Cadastrar Periférico</a></li>
+      <li><a href="{{action('ClienteController@registrarSetorView',$valores->id)}}">Cadastrar Setor</a></li>
       <li><a href="{{action('ClienteController@editarClienteView',$valores->id)}}">Editar Cliente</a></li>
     </ul>
   </menu>
@@ -47,7 +48,7 @@
       </div>
 
       <div class="perifericos">
-        <p class="texto-principal tema">Perifericos</p>
+        <p class="texto-principal tema">Periféricos</p>
         @if(count($perifericos)>0)
           @foreach($perifericos as $periferico)
             <a href="{{action('ClienteController@perfilPerifericoView',['id'=>$valores->id,'id_periferico'=>$periferico->id])}}" class="computador">
@@ -62,7 +63,27 @@
             </a>
           @endforeach
         @else
-          <p class="principal">Nenhuma periferico cadastrado</p>
+          <p class="principal">Nenhuma periférico cadastrado</p>
+        @endif
+      </div>
+
+      <div class="setores">
+        <p class="texto-principal tema">Setores</p>
+        @if(count($setores)>0)
+          @foreach($setores as $setor)
+            <a href="{{action('ClienteController@perfilSetorView',['id'=>$valores->id,'id_setor'=>$setor->id])}}" class="computador">
+              <section>
+                <div class="modelo">
+                  <p class="texto-principal">{{$setor->nome}}</p>
+                </div>
+                <div class="interface">
+                  <p class="texto-secundario">{{$setor->descricao}}</p>
+                </div>
+              </section>
+            </a>
+          @endforeach
+        @else
+          <p class="principal">Nenhuma setor cadastrado</p>
         @endif
       </div>
   </div>

@@ -1,19 +1,19 @@
 @extends('layouts.base-interface')
 @section('header')
-    <div class="panel-heading">Login</div>
+    <div class="panel-heading">Entrar</div>
 @stop
 @section('main')
-  <form class="form-auth" role="form" method="POST" action="{{ url('/login') }}">
+  <form class="form-auth" role="form" method="POST" action="{{ url('/entrar') }}">
       {!! csrf_field() !!}
       <div>
-          <label>E-Mail
+          <label>Email
               @if ($errors->has('email'))
                   <span class="help-block">
                       <strong class="error">{{ $errors->first('email') }}</strong>
                   </span>
               @endif
           </label>
-          <input type="email" class="form-control" name="email" value="{{ old('email') }}">
+          <input type="email" class="form-control" name="email" value="{{ old('email') }}" placeholder="Email">
       </div>
 
       <div>
@@ -35,7 +35,7 @@
 
       <div>
           <button type="submit">Entrar</button>
-          <a href="{{ url('/password/reset') }}">Poxa esqueci minha senha !</a>
+          <a href="{{ url('senha/resetar') }}">Esqueci minha senha!</a>
       </div>
   </form>
 @endsection

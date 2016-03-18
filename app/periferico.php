@@ -11,7 +11,8 @@ class periferico extends Model
       "descricao",
       "interface" ,
       "observacao",
-      "cliente"
+      "cliente",
+      "setor"
     ];
 
     public function cliente(){

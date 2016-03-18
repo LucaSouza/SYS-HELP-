@@ -33,10 +33,12 @@ header{
     text-align: center;
     height: 100%;
     padding-top: 2.5em;
+    padding: 2em;
     #container-menu-user{
+      padding: 2em;
       text-align: left;
       margin-right: 1em;
-      margin-top: 0.1em;
+      margin-top: 1em;
       display: none;
       background-color: white;
       color: black;
@@ -48,9 +50,9 @@ header{
       .item-menu{
         padding: 0.5vh;
         border-bottom: 1px solid #ccc;
-        color: $primary-text-color;
+
         a{
-          color: $secondary-text-color;
+          color: $primary-text-color;
         }
       }
     }
@@ -65,8 +67,10 @@ header{
 }
 .logo-header{
   @include span-columns(2 of 12);
-  height: 6em;
+  height: 5em;
   padding-top: 1em;
+  padding-right: 5em;
+  padding-left: 3em;
   color: white;
   text-align: center;
 }
@@ -80,13 +84,11 @@ main{
   height: auto;
   padding-bottom: 20px;
 }
-
 footer{
   @include span-columns(12);
   background-color: $base-header;
   height: auto;
 }
-
 #menu-secundario,
 #menu-secundario-tecnico,
 #menu-secundario-computador{
@@ -101,7 +103,7 @@ footer{
   padding: 0;
   z-index: 800;
   li{
-    @include span-columns(4 of 12);
+    @include span-columns(3 of 12);
     list-style: none;
     height: 10vh;
     padding-top: 2vh;
@@ -144,4 +146,12 @@ footer{
 #header-tecnico-nome{
   font-size: 1.2em;
   cursor: pointer;
+}
+select{
+  display: inline-block;
+  width: 49.5%;
+  height: 6vh;
+  border-radius: 2px;
+  border: 1px solid $secondary-text-color;
+  background-color: white;
 }

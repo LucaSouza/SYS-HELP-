@@ -23,8 +23,11 @@ class CreateComputadorsTable extends Migration
             $table->string('nome',20)->nullable();
             $table->string('grupo',20)->nullable();
             $table->string('programas',200)->nullable();
-            $table->integer('cliente')->unsigned();
 
+            $table->integer('setor')->unsigned();
+            $table->foreign('setor')->references('id')->on('setors');
+
+            $table->integer('cliente')->unsigned();
             $table->foreign('cliente')->references('id')->on('clientes');
             $table->timestamps();
         });

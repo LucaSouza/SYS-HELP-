@@ -31,7 +31,7 @@ class RequestCliente extends Request
           "rua" => "max:50",
           "numero" => "max:10",
           "complemento" => "max:50",
-          "cep" => "max:8",
+          "cep" => "max:9",
           "cidade" => "max:40",
           "uf" => "size:2"
         ];

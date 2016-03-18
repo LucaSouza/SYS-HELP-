@@ -16,9 +16,13 @@ class computador extends Model
       "grupo",
       "programas",
       "cliente",
+      "setor",
     ];
 
     public function cliente(){
       return $this->hasMany(cliente::class, 'id');
+    }
+    public function setor(){
+      return $this->hasMany(setor::class, 'id');
     }
 }

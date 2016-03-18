@@ -8,15 +8,16 @@ use App\Http\Requests;
 use App\Http\Requests\RequestCliente;
 use App\Http\Requests\RequestComputador;
 use App\Http\Requests\RequestPeriferico;
+use App\Http\Requests\RequestSetor;
 use App\cliente;
 use App\computador;
 use App\tecnico;
 use App\periferico;
+use App\setor;
 use App\Http\Controllers\HomeController;
-
+use Hash;
 class ClienteController extends Controller
 {
-
     /**
      * Show the application dashboard.
      *
@@ -27,19 +28,31 @@ class ClienteController extends Controller
         return view('cliente.cadastrar-cliente');
     }
 
-    public function registrarComputadorView($id)
-    {
-        return view('cliente.cadastrar-computador',compact('id'));
+    public function registrarComputadorView(Cliente $id)
+    {   $setores = $id->setores;
+        return view('cliente.cadastrar-computador',compact('id','setores'));
     }
 
-    public function registrarPerifericoView($id){
-      return view('cliente.cadastrar-periferico',compact('id'));
+    public function registrarPerifericoView(Cliente $id){
+      $setores = $id->setores;
+      return view('cliente.cadastrar-periferico',compact('id','setores'));
+    }
+
+    public function registrarSetorView(Cliente $id){
+      return view('cliente.cadastrar-setor',compact('id'));
     }
 
     public function registrarPeriferico(RequestPeriferico $request, $id){
       $dados = Request::except('_token');
       $dados['cliente'] = $id;
       $periferico = periferico::create($dados);
+      return $this->perfil($id);
+    }
+
+    public function registrarSetor(RequestSetor $request, $id){
+      $dados = Request::except('_token');
+      $dados['cliente'] = $id;
+      $setor = setor::create($dados);
       return $this->perfil($id);
     }
 
@@ -57,14 +70,21 @@ class ClienteController extends Controller
       return view('cliente.transferir-periferico',compact('clientes','periferico','id'));
     }
 
-    public function perfilComputadorView($id,$id_computador){
+    public function perfilComputadorView(cliente $id,$id_computador){
         $computador = computador::find($id_computador);
-        return view('cliente.perfil-computador',compact('id','computador'));
+        $setores = $id->setores;
+        return view('cliente.perfil-computador',compact('id','computador','setores'));
     }
 
-    public function perfilPerifericoView($id,$id_periferico){
+    public function perfilPerifericoView(cliente $id,$id_periferico){
         $periferico = periferico::find($id_periferico);
-        return view('cliente.perfil-periferico',compact('id','periferico'));
+        $setores = $id->setores;
+        return view('cliente.perfil-periferico',compact('id','periferico','setores'));
+    }
+
+    public function perfilSetorView($id,$id_setor){
+        $setor = setor::find($id_setor);
+        return view('cliente.perfil-setor',compact('id','setor'));
     }
 
     public function alterarComputador(RequestComputador $request,$id,$id_computador){
@@ -75,6 +95,12 @@ class ClienteController extends Controller
     public function alterarPeriferico(RequestPeriferico $request,$id,$id_periferico){
         $periferico = periferico::find($id_periferico)->update(Request::except('_token'));
         return redirect()->action('ClienteController@perfil', ['id' => $id]);
+    }
+
+    public function alterarSetor(RequestSetor $request,$id){
+        $setor = setor::find($id)->update(Request::except('_token'));
+        //$cliente = $setor->cliente;
+        return back();
     }
 
     public function excluirComputador($id,$id_computador){
@@ -88,12 +114,12 @@ class ClienteController extends Controller
     }
 
     public function transferirComputador($id,$id_computador,$id_cliente_destino){
-        $computador = computador::find($id_computador)->update(['cliente'=>$id_cliente_destino]);
+        $computador = computador::find($id_computador)->update(['cliente'=>$id_cliente_destino,'setor'=>0]);
         return redirect()->action('ClienteController@perfil', ['id' => $id]);
     }
 
     public function transferirPeriferico($id,$id_periferico,$id_cliente_destino){
-        $periferico = periferico::find($id_periferico)->update(['cliente'=>$id_cliente_destino]);
+        $periferico = periferico::find($id_periferico)->update(['cliente'=>$id_cliente_destino,'setor'=>0]);
         return redirect()->action('ClienteController@perfil', ['id' => $id]);
     }
 
@@ -120,7 +146,8 @@ class ClienteController extends Controller
     {   $valores = cliente::find($id);
         $computadores = $valores->computador;
         $perifericos = $valores->periferico;
-        return view('cliente.perfil',compact('computadores','perifericos','valores'));
+        $setores = $valores->setores;
+        return view('cliente.perfil',compact('computadores','perifericos','setores','valores'));
     }
 
     public function editarClienteView($id){

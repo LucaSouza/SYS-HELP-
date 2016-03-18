@@ -28,6 +28,16 @@ Route::get('/', function () {
 
 Route::group(['middleware' => ['web']], function () {
     //
+    Route::get('/registrar', 'Auth\AuthController@getRegister');
+    Route::post('/registrar', 'Auth\AuthController@postRegister');
+
+    Route::get('/entrar', 'Auth\AuthController@getLogin');
+    Route::post('/entrar', 'Auth\AuthController@postLogin');
+    Route::get('/logout', 'Auth\AuthController@getLogout');
+
+    Route::get('senha/resetar/{token}', 'PasswordController@getReset');
+    Route::post('senha/resetar', 'PasswordController@postReset');
+
     Route::get('/registrar-cliente','ClienteController@registrarClienteView');
     Route::post('/registrar-cliente','ClienteController@registrarCliente');
 
@@ -41,7 +51,7 @@ Route::group(['middleware' => ['web']], function () {
     Route::get('/cliente/{id}/excluir-computador/{id_computador}','ClienteController@excluirComputador');
     Route::post('/cliente/{id}/alterar-computador/{id_computador}','ClienteController@alterarComputador');
     Route::get('/cliente/{id}/transferir-computador/{id_computador}','ClienteController@transferirComputadorView');
-    Route::get('/cliente-{id}/transferir-periferico-{id_computador}-para-{id_cliente_destino}','ClienteController@transferirComputador');
+    Route::get('/cliente-{id}/transferir-computador-{id_computador}-para-{id_cliente_destino}','ClienteController@transferirComputador');
 
     Route::get('/cliente/{id}/registrar-periferico','ClienteController@registrarPerifericoView');
     Route::post('/cliente/{id}/registrar-periferico','ClienteController@registrarPeriferico');
@@ -50,10 +60,16 @@ Route::group(['middleware' => ['web']], function () {
     Route::get('/cliente/{id}/periferico/{id_periferico}','ClienteController@perfilPerifericoView');
     Route::get('/cliente/{id}/transferir-periferico/{id_periferico}','ClienteController@transferirPerifericoView');
     Route::get('/cliente-{id}/transferir-periferico-{id_periferico}-para-{id_cliente_destino}','ClienteController@transferirPeriferico');
+
+    Route::get('/cliente/{id}/registrar-setor','ClienteController@registrarSetorView');
+    Route::post('/cliente/{id}/registrar-setor','ClienteController@registrarSetor');
+    Route::post('/cliente/{id}/alterar-setor','ClienteController@alterarSetor');
+    Route::get('/cliente/{id}/setor/{id_setor}','ClienteController@perfilSetorView');
+
 });
 
 Route::group(['middleware' => 'web'], function () {
     Route::auth();
 
-    Route::get('/home', 'HomeController@index');
+    Route::get('/principal', 'HomeController@index');
 });

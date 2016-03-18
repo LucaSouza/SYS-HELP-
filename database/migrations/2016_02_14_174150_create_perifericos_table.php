@@ -18,8 +18,11 @@ class CreatePerifericosTable extends Migration
             $table->string('descricao',60)->nullable();
             $table->string('interface',20)->nullable();
             $table->string('observacao',200)->nullable();
-            $table->integer('cliente')->unsigned();
 
+            $table->integer('setor')->unsigned();
+            $table->foreign('setor')->references('id')->on('setors');
+            
+            $table->integer('cliente')->unsigned();
             $table->foreign('cliente')->references('id')->on('clientes');
             $table->timestamps();
         });

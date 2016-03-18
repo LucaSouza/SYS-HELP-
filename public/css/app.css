@@ -364,13 +364,15 @@ header {
     width: 14.70196%;
     text-align: center;
     height: 100%;
-    padding-top: 2.5em; }
+    padding-top: 2.5em;
+    padding: 2em; }
     header .container-user:last-child {
       margin-right: 0; }
     header .container-user #container-menu-user {
+      padding: 2em;
       text-align: left;
       margin-right: 1em;
-      margin-top: 0.1em;
+      margin-top: 1em;
       display: none;
       background-color: white;
       color: black;
@@ -381,10 +383,9 @@ header {
       position: absolute; }
       header .container-user #container-menu-user .item-menu {
         padding: 0.5vh;
-        border-bottom: 1px solid #ccc;
-        color: #000; }
+        border-bottom: 1px solid #ccc; }
         header .container-user #container-menu-user .item-menu a {
-          color: #A1A1A4; }
+          color: #000; }
   header a {
     color: white;
     text-decoration: none; }
@@ -396,8 +397,10 @@ header {
   display: block;
   margin-right: 2.35765%;
   width: 14.70196%;
-  height: 6em;
+  height: 5em;
   padding-top: 1em;
+  padding-right: 5em;
+  padding-left: 3em;
   color: white;
   text-align: center; }
   .logo-header:last-child {
@@ -453,7 +456,7 @@ footer {
     float: left;
     display: block;
     margin-right: 2.35765%;
-    width: 31.76157%;
+    width: 23.23176%;
     list-style: none;
     height: 10vh;
     padding-top: 2vh;
@@ -508,6 +511,14 @@ footer {
 #header-tecnico-nome {
   font-size: 1.2em;
   cursor: pointer; }
+
+select {
+  display: inline-block;
+  width: 49.5%;
+  height: 6vh;
+  border-radius: 2px;
+  border: 1px solid #A1A1A4;
+  background-color: white; }
 
 #container-buttons {
   float: right;
@@ -591,11 +602,9 @@ footer {
   color: white; }
   .hero-inner:last-child {
     margin-right: 0; }
-  .hero-inner .li_cup {
-    width: 100%;
-    font-size: 5rem;
-    margin-top: 1rem;
-    color: white; }
+  .hero-inner .hero-logo {
+    width: 7em;
+    margin-bottom: 2em; }
   .hero-inner .hero-copy h1 {
     font-size: 3em;
     margin-bottom: 0.5em; }
@@ -710,74 +719,9 @@ footer {
   display: block;
   margin-right: 2.35765%;
   width: 48.82117%;
-  margin-left: 25.58941%;
-  margin-top: 1em; }
+  margin-left: 25.58941%; }
   .form-auth:last-child {
     margin-right: 0; }
-
-.container-equipamentos {
-  float: left;
-  display: block;
-  margin-right: 2.35765%;
-  width: 82.94039%;
-  margin-left: 8.5298%; }
-  .container-equipamentos:last-child {
-    margin-right: 0; }
-
-.computadores,
-.perifericos {
-  float: left;
-  display: block;
-  margin-right: 2.84259%;
-  width: 48.57871%; }
-  .computadores:last-child,
-  .perifericos:last-child {
-    margin-right: 0; }
-  .computadores .tema,
-  .perifericos .tema {
-    float: left;
-    display: block;
-    margin-right: 5.85151%;
-    width: 100%;
-    background-color: white;
-    text-align: center;
-    font-weight: bold; }
-    .computadores .tema:last-child,
-    .perifericos .tema:last-child {
-      margin-right: 0; }
-  .computadores .computador,
-  .perifericos .computador {
-    float: left;
-    display: block;
-    margin-right: 5.85151%;
-    width: 47.07425%;
-    margin-top: 1vh;
-    border-radius: 2px;
-    background-color: white;
-    min-height: 100px; }
-    .computadores .computador:last-child,
-    .perifericos .computador:last-child {
-      margin-right: 0; }
-    .computadores .computador:nth-child(3n),
-    .perifericos .computador:nth-child(3n) {
-      margin-right: 0; }
-    .computadores .computador:nth-child(3n+1),
-    .perifericos .computador:nth-child(3n+1) {
-      clear: left; }
-    .computadores .computador:hover,
-    .perifericos .computador:hover {
-      -webkit-transform: scale(1.02);
-      -moz-transform: scale(1.02);
-      -ms-transform: scale(1.02);
-      -o-transform: scale(1.02);
-      transform: scale(1.02);
-      cursor: pointer; }
-
-.texto-principal {
-  color: #000; }
-
-.texto-secundario {
-  color: #A1A1A4; }
 
 .container-pessoas {
   float: left;
@@ -811,5 +755,88 @@ footer {
     -o-transform: scale(1.01);
     transform: scale(1.01);
     cursor: pointer; }
+
+.container-equipamentos {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 82.94039%;
+  margin-left: 8.5298%; }
+  .container-equipamentos:last-child {
+    margin-right: 0; }
+
+.computadores,
+.perifericos,
+.setores {
+  float: left;
+  display: block;
+  margin-right: 2.84259%;
+  width: 46.52186%;
+  margin-left: 0.5vw; }
+  .computadores:last-child,
+  .perifericos:last-child,
+  .setores:last-child {
+    margin-right: 0; }
+  .computadores .tema,
+  .perifericos .tema,
+  .setores .tema {
+    float: left;
+    display: block;
+    margin-right: 6.11022%;
+    width: 100%;
+    background-color: white;
+    text-align: center;
+    font-weight: bold; }
+    .computadores .tema:last-child,
+    .perifericos .tema:last-child,
+    .setores .tema:last-child {
+      margin-right: 0; }
+  .computadores .computador,
+  .perifericos .computador,
+  .setores .computador {
+    float: left;
+    display: block;
+    margin-right: 6.11022%;
+    width: 46.94489%;
+    margin-top: 1vh;
+    border-radius: 2px;
+    background-color: white;
+    min-height: 100px; }
+    .computadores .computador:last-child,
+    .perifericos .computador:last-child,
+    .setores .computador:last-child {
+      margin-right: 0; }
+    .computadores .computador:nth-child(3n),
+    .perifericos .computador:nth-child(3n),
+    .setores .computador:nth-child(3n) {
+      margin-right: 0; }
+    .computadores .computador:nth-child(3n+1),
+    .perifericos .computador:nth-child(3n+1),
+    .setores .computador:nth-child(3n+1) {
+      clear: left; }
+    .computadores .computador:hover,
+    .perifericos .computador:hover,
+    .setores .computador:hover {
+      -webkit-transform: scale(1.02);
+      -moz-transform: scale(1.02);
+      -ms-transform: scale(1.02);
+      -o-transform: scale(1.02);
+      transform: scale(1.02);
+      cursor: pointer; }
+
+#tema-form {
+  font-size: 1.125rem;
+  height: 6vh;
+  margin-bottom: 10vh;
+  font-weight: 400; }
+
+.setores {
+  margin-top: 2vh; }
+
+.texto-principal {
+  color: #000; }
+
+.texto-secundario {
+  color: #A1A1A4; }
 
 /*# sourceMappingURL=app.css.map */

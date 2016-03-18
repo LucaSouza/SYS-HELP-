@@ -6,7 +6,7 @@
 
 @section('menu-secundario')
   <menu id="menu-secundario">
-    <p><span class="nome-user">{{Auth::user()->name}}</span>bom ?<br> Vamos mandar esse {{$computador->modelo}} para outro cliente ?</p>
+    <p><span class="nome-user">{{Auth::user()->name}}</span><br> Deseja transferir o computador {{$computador->modelo}} para outro cliente?</p>
   </menu>
 @stop
 
@@ -24,6 +24,6 @@
       @endforeach
     </div>
   @else
-    <p class="principal inexistente">Você não tem nenhum cliente ...</p>
+    <p class="principal inexistente">Você não tem nenhum cliente.</p>
   @endif
 @stop

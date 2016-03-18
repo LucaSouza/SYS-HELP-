@@ -4,7 +4,7 @@
   <div class="panel-heading">Registrar</div>
 @stop
 @section('main')
-  <form class="form-auth" role="form" method="POST" action="{{ url('/register') }}">
+  <form class="form-auth" role="form" method="POST" action="{{ url('/registrar') }}">
                         {!! csrf_field() !!}
 
       <div>
@@ -21,7 +21,7 @@
       </div>
 
       <div>
-          <label>E-Mail Address
+          <label>Email
             @if ($errors->has('email'))
                 <span>
                     <strong class="error">{{ $errors->first('email') }}</strong>
@@ -35,7 +35,7 @@
       </div>
 
       <div>
-          <label>Password
+          <label>Senha
             @if ($errors->has('password'))
                 <span>
                     <strong class="error">{{ $errors->first('password') }}</strong>
@@ -49,7 +49,7 @@
       </div>
 
       <div>
-          <label>Confirm Password
+          <label>Confirmar Senha
             @if ($errors->has('password_confirmation'))
                 <span>
                     <strong class="error">{{ $errors->first('password_confirmation') }}</strong>

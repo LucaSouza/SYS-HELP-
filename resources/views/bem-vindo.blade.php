@@ -9,17 +9,15 @@
 	</head>
 	<body>
 		<header id="header">
-			<span class="logo-header"><span aria-hidden="true" class="li_cup">&nbsp;</span></span>
+			<img class="logo-header" src="{{{ asset('/imagens/logo.png')}}}" alt="" />
 			<div id="container-buttons">
 				@if(Auth::guest())
-					<a id="logar" href="{{ url('/login')}}">Logar</a>
-					<a id="cadastrar" href="{{ url('/register') }}">Cadastrar</a>
+					<a id="logar" href="{{ url('/entrar')}}">Entrar</a>
+					<a id="cadastrar" href="{{ url('/registrar') }}">Registrar</a>
 				@else
 					<li>
-							<a href="#">
-									<span>Olá</span>{{ Auth::user()->name }}
-									<li><a href="{{ url('/logout') }}"><i class="fa fa-btn fa-sign-out"></i>Logout</a></li>
-							</a>
+							<span>Olá</span>{{ Auth::user()->name }}
+							<li><a href="{{ url('/logout') }}">Logout</a></li>
 					</li>
 				@endif
 			</div>
@@ -27,10 +25,10 @@
 		<main id="main">
 			<div class="hero">
 					<div class="hero-inner">
-				    <a href=""><span aria-hidden="true" class="li_cup hero-logo">&nbsp;</a>
+				    <img class="hero-logo" src="{{{ asset('/imagens/logo.png')}}}" alt="imagem" />
 						<div class="hero-copy">
 							<h1>SYS HELP</h1>
-							<p>Um sistema Web desenvolvido para todos os técnicos em informática do mundo !</p>
+							<p>Um sistema Web desenvolvido para todos os técnicos em informática do mundo!</p>
 						</div>
 					</div>
 			</div>
@@ -48,12 +46,12 @@
 				  <a href="javascript:void(0)" class="grid-item grid-item-big">
 				    <span aria-hidden="true" class="li_note"></span>
 				    <h1>Documentação</h1>
-				    <p>Toda documentação esta no Github, da uma olhada lá !</p>
+				    <p>Toda documentação está no Github, da uma olhada lá!</p>
 				  </a>
 				  <a href="javascript:void(0)" class="grid-item">
 				    <span aria-hidden="true" class="li_settings"></span>
 				    <h1>Projetos</h1>
-				    <p>Esse é o nosso único projeto. ;p</p>
+				    <p>Esse é o nosso primeiro projeto. ;p</p>
 				  </a>
 			</div>
 		</main>

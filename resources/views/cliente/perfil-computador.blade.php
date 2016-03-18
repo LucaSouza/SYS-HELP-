@@ -22,7 +22,7 @@
   @endif
   <form class="form-auth" action="{{action('ClienteController@alterarComputador',['id'=>$computador->cliente,'id_computador'=>$computador->id])}}" method="post">
     @include('models/model-form-cadastro-edit-computador')
-    <button type="submit">Alterar</button>
+    <br><button type="submit">Alterar</button>
     <a href="{{action('ClienteController@excluirComputador',['id'=>$computador->cliente,'id_computador'=>$computador->id])}}"><button type="button" name="button">Excluir</button></a>
   </form>
 @stop

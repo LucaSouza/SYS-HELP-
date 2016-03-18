@@ -20,13 +20,13 @@
               <section>
                  <div id="nome" class="texto-principal">{{$cliente->nome}}</div>
                  <div id="telefone" class="texto-secundario">{{$cliente->telefone}}</div>
-                 <div id="local" class="texto-secundario">{{$cliente->cidade}},{{$cliente->uf}}</div>
+                 <div id="local" class="texto-secundario">{{$cliente->cidade}}, {{$cliente->uf}}</div>
                  <div id="num-dispositivos" class="info-cli">dispositivos ({{$cliente->dispositivos}})</div>
               </section>
           </a>
         @endforeach
     </div>
   @else
-    <p class="principa inexistente">Você não possui cliente..</p>
+    <p class="principa inexistente">Você não possui cliente.</p>
   @endif
 @stop

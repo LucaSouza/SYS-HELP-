@@ -1,15 +1,16 @@
 @extends('layouts.base-interface')
 
 @section('header')
-  <div class="panel-heading">Cadastrar Computador</div>
+  <div class="panel-heading"><a href="{{action('ClienteController@perfil',$id->id)}}">{{$id->nome}}</a></div>
 @stop
 
 @section('menu-secundario')
   <menu id="menu-secundario">
     <ul>
-      <li><a href="{{action('ClienteController@registrarComputadorView',$id)}}">Cadastrar Computador</a></li>
-      <li><a href="{{action('ClienteController@registrarPerifericoView',$id)}}">Cadastrar Periférico</a></li>
-      <li><a href="{{action('ClienteController@editarClienteView',$id)}}">Editar Cliente</a></li>
+      <li><a href="{{action('ClienteController@registrarComputadorView',$id->id)}}">Cadastrar Computador</a></li>
+      <li><a href="{{action('ClienteController@registrarPerifericoView',$id->id)}}">Cadastrar Periférico</a></li>
+      <li><a href="{{action('ClienteController@registrarSetorView',$id->id)}}">Cadastrar Setor</a></li>
+      <li><a href="{{action('ClienteController@editarClienteView',$id->id)}}">Editar Cliente</a></li>
     </ul>
   </menu>
 @stop
@@ -24,8 +25,9 @@
         @endforeach
     </ul>
   @endif
-  <form class="form-auth" action="{{action('ClienteController@registrarComputador',$id)}}" method="post">
+  <form class="form-auth" action="{{action('ClienteController@registrarComputador',$id->id)}}" method="post">
+    <span id="tema-form">Cadastrar Computador</span>
     @include('models/model-form-cadastro-edit-computador')
-    <button type="submit">Cadastrar</button>
+    <br><button type="submit">Cadastrar</button>
   </form>
 @stop
